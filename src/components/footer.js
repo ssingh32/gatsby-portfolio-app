@@ -1,10 +1,11 @@
 import React from 'react';
+import footerStyles from './footer.module.scss';
 
 const Footer = () => {
     return (
-        <div>
-        <h1>Footer</h1>
-        </div>
+        <footer className={footerStyles.footer}>
+        <p>Created by Sukhdip Singh, © 2019</p>
+        </footer>
     )
 }
 
