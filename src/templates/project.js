@@ -8,6 +8,7 @@ export const query = graphql`query($slug: String!) {
           title
           slug
           startDate(formatString: "MMMM Do, YYYY")
+          endDate(formatString: "MMMM Do, YYYY")
           body {
             json
           }
@@ -15,22 +16,23 @@ export const query = graphql`query($slug: String!) {
   }`;
 
 const Project = (props) => {
-    // const options = {
-    //     renderNode: {
-    //       "embedded-asset-block": (node) => {
-    //         const alt = node.data.target.fields.title['en-US'];
-    //         const url= node.data.target.fields.file['en-US'].url;
-    //         return <img src={url} alt={alt}/>
-    //       }
-    //     }
-    //   }
+    const options = {
+        renderNode: {
+          "embedded-asset-block": (node) => {
+            const alt = node.data.target.fields.title['en-US'];
+            const url= node.data.target.fields.file['en-US'].url;
+            return <img src={url} alt={alt}/>
+          }
+        }
+      }
 
     return (
         <Layout>
             <Head title={props.data.contentfulProjects.title}/>
             <h1>{props.data.contentfulProjects.title}</h1>
-            <p>{props.data.contentfulProjects.startDate}</p>
-            {documentToReactComponents(props.data.contentfulProjects.body.json)}
+            <p>{props.data.contentfulProjects.startDate} - 
+            {props.data.contentfulProjects.endDate ? props.data.contentfulProjects.endDate : "Present"}</p>
+            {documentToReactComponents(props.data.contentfulProjects.body.json, options)}
         </Layout>
     )
 }

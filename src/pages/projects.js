@@ -17,6 +17,7 @@ const Projects = () => {
               title
               slug
               startDate(formatString: "MMMM Do, YYYY")
+              endDate(formatString: "MMMM Do, YYYY")
             }
           }
         }
@@ -26,14 +27,14 @@ const Projects = () => {
         <div>
         <Layout>
             <Head title="Projects"/>
-            <h1>Projects Page</h1>
+            <h1>Projects</h1>
             <ol className={projectStyles.posts}>
                 {postData.allContentfulProjects.edges.map((edge) => {
                     return (
                         <li className={projectStyles.post} key={edge.node.title}>
                           <Link to={`/projects/${edge.node.slug}`}>
                               <h2>{edge.node.title}</h2>
-                              <p>{edge.node.startDate}</p>
+                              <p>{edge.node.startDate} - {edge.node.endDate ? edge.node.endDate : "Present"}</p>
                           </Link>
                         </li>
                     )
