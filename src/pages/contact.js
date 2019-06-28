@@ -5,8 +5,9 @@ import Head from '../components/head';
 const Contact = () => {
     return (
         <Layout>
-        <Head title="Contact"/>
-        <h1>Contact Page</h1>
+            <Head title="Contact"/>
+            <h1>Contact Page</h1>
+            <p>My Twitter <a href="https://twitter.com/sukhdipsnijjar">@sukhdipsnijjar</a></p>
         </Layout>
     )
 }

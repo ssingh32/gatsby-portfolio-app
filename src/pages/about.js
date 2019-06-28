@@ -5,8 +5,10 @@ import Head from '../components/head';
 const About = () => {
     return (
         <Layout>
-        <Head title="About"/>
-        <h1>About Page</h1>
+            <Head title="About"/>
+            <h1>About Page</h1>
+            <p>Bio here</p>
+            <Link to="/contact">Learn More</Link>
         </Layout>
     )
 }
