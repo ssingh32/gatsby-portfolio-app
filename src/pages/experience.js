@@ -18,6 +18,7 @@ const Experience = () => {
                     companyName
                     startDate(formatString: "MMMM Do, YYYY")
                     endDate(formatString: "MMMM Do, YYYY")
+                    location
                 }
             }
         }
@@ -34,6 +35,7 @@ const Experience = () => {
                     <li className={projectStyles.post} key={edge.node.title}>
                       <Link to={`/experience/${edge.node.slug}`}>
                           <h2>{edge.node.companyName}, {edge.node.title}</h2>
+                          <p>{edge.node.location}</p>
                           <p>{edge.node.startDate} - {edge.node.endDate ? edge.node.endDate : "Present"}</p>
                       </Link>
                     </li>

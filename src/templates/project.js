@@ -30,8 +30,7 @@ const Project = (props) => {
         <Layout>
             <Head title={props.data.contentfulProjects.title}/>
             <h1>{props.data.contentfulProjects.title}</h1>
-            <p>{props.data.contentfulProjects.startDate} - 
-            {props.data.contentfulProjects.endDate ? props.data.contentfulProjects.endDate : "Present"}</p>
+            <p>{props.data.contentfulProjects.startDate} - {props.data.contentfulProjects.endDate ? props.data.contentfulProjects.endDate : "Present"}</p>
             {documentToReactComponents(props.data.contentfulProjects.body.json, options)}
         </Layout>
     )
