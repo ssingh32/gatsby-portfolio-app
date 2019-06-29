@@ -25,7 +25,7 @@ const About = () => {
             I'm also an active member of the Community Involvement Program on campus where we help 
             promote higher education and learning in the local Stockton area. </p>
             <div className={aboutStyles.skills}>
-                <p>Here is an overview my skills:</p>
+                <p>Here is an overview of my skills:</p>
                 <h5>Programming: </h5>{skills.programmingSkills}
                 <h5>Tools: </h5>{skills.tools}
                 <h5>Frameworks: </h5>{skills.frameworks}
