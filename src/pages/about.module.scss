@@ -12,7 +12,10 @@
 }
 
 .photo {
-    height:  500px;;
+    max-width: 65%;
+    @media (min-width: 45rem) {
+        max-width: 100%;
+      }
 }
 
 .skills {
