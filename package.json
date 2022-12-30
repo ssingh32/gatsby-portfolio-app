@@ -15,7 +15,7 @@
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.2.0",
     "env-cmd": "^8.0.2",
-    "gatsby": "^2.10.4",
+    "gatsby": "^2.32.13",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.1.0",
     "gatsby-plugin-sharp": "^2.0.32",
